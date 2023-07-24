@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hugo Le Port - Java Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+          rel="stylesheet">
+    <meta name="description" content="">
+    <link rel="preload" href="../assets/style.css" as="style"/>
+    <link rel="stylesheet" href="../assets/style.css">
+    <script src="https://kit.fontawesome.com/78b4bd7f01.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<header id="header-placeholder"></header>
+<script>
+  fetch('./header.html')
+    .then(response => response.text())
+    .then(text => {
+      const placeholder = document.getElementById('header-placeholder');
+      placeholder.innerHTML = text;
+    });
+
+
+</script>
+
+<main>
+    <h2>My projects</h2>
+    <div class="search">
+        <input id="searchInput" type="text" placeholder="Exemple: java junit...">
+        <div class="encapsulated-words" id="encapsulated-words"></div>
+    </div>
+    <div id="projects">
+        <div id="add-project">
+            <div class="add-circle">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script type="text/javascript" src="../js/projects.js"></script>
+</body>
+</html>
