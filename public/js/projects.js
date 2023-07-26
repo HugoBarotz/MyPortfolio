@@ -2,7 +2,7 @@ const encapsulatedWordsArray = [];
 
 function searchProjects() {
     const jsonConstraints = JSON.stringify(encapsulatedWordsArray);
-    return fetch("http://localhost:8080/apis/v1/project/_search", {
+    return fetch("https://project-fb.onrender.com/api/v1/project/_search", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
