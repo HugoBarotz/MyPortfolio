@@ -1,5 +1,20 @@
 const encapsulatedWordsArray = [];
 
+/* after page is loaded, check if user is "logged in" and display the correct elements */
+document.addEventListener('DOMContentLoaded', function () {
+    if (localStorage.getItem("username") != null) {
+        const elementsToShow = document.getElementsByClassName("show-if-logged")
+        for (const element of elementsToShow) {
+            element.style.display = "block"
+        }
+        const elementsToHide = document.getElementsByClassName("hide-if-logged")
+        for (const element of elementsToHide) {
+            element.style.display = "none"
+        }
+    }
+}, false)
+
+/* search projects */
 function searchProjects() {
     const jsonConstraints = JSON.stringify(encapsulatedWordsArray);
     return fetch("https://project-fb.onrender.com/api/v1/project/_search", {
@@ -74,6 +89,7 @@ function addProjectDiv(id, name, skills, description, githubLink) {
     const newSpanGithub = createSpanWithClassAndText("github");
     const newGithubLink = document.createElement("a")
     newGithubLink.href = githubLink
+    newGithubLink.target= "_blank"
     newGithubLink.textContent = "Github"
     newSpanGithub.appendChild(newGithubLink)
 

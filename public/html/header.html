@@ -1,22 +1,25 @@
-<header>
+<header onload="onHeaderLoad()">
     <h1>Hugo Le Port</h1>
     <nav>
         <ul>
             <li>
-                <a href="../index.html" class="menulink">home</a>
+                <a href="/MyPortfolio/public/index.html" class="menulink">home</a>
             </li>
             <li>
-                <a href="./html/projects.html" class="menulink">projects</a>
+                <a href="/MyPortfolio/public/html/projects.html" class="menulink">projects</a>
             </li>
             <li>
-                <a href="./html/contact.html" class="menulink">contact</a>
+                <a href="/MyPortfolio/public/html/contact.html" class="menulink">contact</a>
             </li>
             <li>
-                <a href="./html/about.html" class="menulink">about me</a>
+                <a href="/MyPortfolio/public/html/about.html" class="menulink">about me</a>
             </li>
-            <!--<li>
-                <a href="./login.html" class="menulink grow">login</a>
-            </li>-->
+            <li>
+                <a id="login-id" href="/MyPortfolio/public/html/login.html" class="menulink hide-if-logged">login</a>
+            </li>
+            <li>
+                <a id="logout-id" href="/MyPortfolio/public/html/login.html" class="menulink show-if-logged">logout</a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -43,3 +46,5 @@
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
 </script>
+
+<script type="text/javascript" src="../js/header.js"></script>

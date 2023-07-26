@@ -21,11 +21,12 @@
   fetch('./header.html')
     .then(response => response.text())
     .then(text => {
-      const placeholder = document.getElementById('header-placeholder');
-      placeholder.innerHTML = text;
+      const placeholder = document.getElementById('header-placeholder')
+      placeholder.innerHTML = text
+      if(localStorage.getItem('username')){
+        document.getElementById('login-id').textContent = "logout"
+      }
     });
-
-
 </script>
 
 <main>
@@ -35,7 +36,7 @@
         <div class="encapsulated-words" id="encapsulated-words"></div>
     </div>
     <div id="projects">
-        <div id="add-project">
+        <div id="add-project" class="show-if-logged">
             <div class="add-circle">
                 <i class="fa-solid fa-plus"></i>
             </div>

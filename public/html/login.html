@@ -21,19 +21,41 @@
   fetch('./header.html')
     .then(response => response.text())
     .then(text => {
-      const placeholder = document.getElementById('header-placeholder');
-      placeholder.innerHTML = text;
+      const placeholder = document.getElementById('header-placeholder')
+      placeholder.innerHTML = text
+      if(localStorage.getItem('username')){
+        document.getElementById('login-id').textContent = localStorage.getItem('username').charAt(0).toUpperCase()
+      }
     });
 </script>
 
-<main></main>
+<main>
+    <div class="info-box">
+        <span class="close-btn" onclick="closeInfoBox()">X</span>
+        <p>This is not a real login page for now, but will be in the future.
+        Enter your name, and that will allow you to create your projects for test purposes, aswell as updating/deleting them (and only them)</p>
+    </div>
+    <section id="login">
+        <form action="#" id="loginForm">
+            <label for="username">Username</label>
+            <input type="username" name="username" id="username">
+            <input id="usernameInput" type="submit" value="Log in">
+            <!--
+             <label for="email">Email</label>
+             <input type="email" name="email" id="email">
+             <label for="password">Password</label>
+             <input type="password" name="password" id="password">
+             <input id="loginInput" type="submit" value="Log in">
+             -->
+        </form>
+        <!--
+        <a href="#" id="forgotpw">Forgot your password?</a>
+        -->
+    </section>
+</main>
 
-<footer>
-    <nav>
-        <ul>
-        </ul>
-    </nav>
-</footer>
+
+<script type="text/javascript" src="../js/login.js"></script>
 
 </body>
 </html>
