@@ -17,14 +17,15 @@
 </head>
 <body>
 <header id="header-placeholder"></header>
+<h2>To do</h2>
 <script>
   fetch('./header.html')
     .then(response => response.text())
     .then(text => {
       const placeholder = document.getElementById('header-placeholder')
       placeholder.innerHTML = text
-      if(localStorage.getItem('username')){
-        document.getElementById('login-id').textContent = localStorage.getItem('username').charAt(0).toUpperCase()
+      if(sessionStorage.getItem('username')){
+        document.getElementById('login-id').textContent = "logout"
       }
     });
 </script>

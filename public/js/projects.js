@@ -2,14 +2,10 @@ const encapsulatedWordsArray = [];
 
 /* after page is loaded, check if user is "logged in" and display the correct elements */
 document.addEventListener('DOMContentLoaded', function () {
-    if (localStorage.getItem("username") != null) {
+    if (sessionStorage.getItem("username") != null) {
         const elementsToShow = document.getElementsByClassName("show-if-logged")
         for (const element of elementsToShow) {
             element.style.display = "block"
-        }
-        const elementsToHide = document.getElementsByClassName("hide-if-logged")
-        for (const element of elementsToHide) {
-            element.style.display = "none"
         }
     }
 }, false)
@@ -57,6 +53,13 @@ async function searchFilteredProjects() {
                 const projectId = child.getAttribute("projectId");
                 child.style.display = ids.includes(projectId) ? "block" : "none";
             }
+        }
+
+        const infoProject = document.getElementById("info-box-projects")
+        if(ids.length == 0){
+            infoProject.classList.remove("hide")
+        }else{
+            infoProject.classList.add("hide")
         }
     } catch (error) {
         console.error("Error occurred while fetching projects:", error);

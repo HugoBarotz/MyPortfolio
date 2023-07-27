@@ -64,6 +64,7 @@ h1 {
 }
 
 h2 {
+color: DodgerBlue;
 	text-align: center;
 	font-size: calc(8000vw / 1018);
 	margin-top: 120px;
@@ -420,3 +421,17 @@ input[type="submit"] {
   color: #006633;
   cursor: pointer;
 }
+
+/* info search */
+#info-box-projects {
+                      background-color: IndianRed;
+                      border: 1px solid FireBrick;
+                      padding: 10px;
+                      margin-top: 20px;
+                  	margin-left: min(50px, 5%);
+                  	border-radius: 10px;
+                  	width: 200px;
+                  }
+
+                  .hide{
+                  display: none;}

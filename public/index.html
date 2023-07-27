@@ -25,11 +25,10 @@
     .then(text => {
       const placeholder = document.getElementById('header-placeholder')
       placeholder.innerHTML = text
-      if(localStorage.getItem('username')){
-        document.getElementById('login-id').textContent = localStorage.getItem('username').charAt(0).toUpperCase()
+      if(sessionStorage.getItem('username')){
+        document.getElementById('login-id').textContent = "logout"
       }
     });
-
 </script>
 
 <main>
@@ -43,7 +42,17 @@
             <p class="main-description">With a solid background of 4 years' experience as a QA Developer, I aim to leverage
                 this expertise to become a proficient Java Backend Developer.
                 The virtues instilled by the QA profession will make me an impactful asset, enabling me to contribute
-                significantly to the various projects I work on.</p>
+                significantly to the various projects I work on.
+                </br>
+                </br>
+                This website is designed primarily for training purposes,
+                and does not reflect the full extent of my skills.
+                Furthermore, I don't pretend to be a UX designer or a front-end developer.
+                Take a look at the projects page to interact with RESTFUL APIs!
+                </br>
+                </br>
+                Be careful, there might be some hidden interactions... but don't forget that this is still WIP
+            </p>
         </div>
     </section>
     <section class="workExperiences">

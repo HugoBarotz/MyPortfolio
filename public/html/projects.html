@@ -23,7 +23,7 @@
     .then(text => {
       const placeholder = document.getElementById('header-placeholder')
       placeholder.innerHTML = text
-      if(localStorage.getItem('username')){
+      if(sessionStorage.getItem('username')){
         document.getElementById('login-id').textContent = "logout"
       }
     });
@@ -34,6 +34,9 @@
     <div class="search">
         <input id="searchInput" type="text" placeholder="Exemple: java junit...">
         <div class="encapsulated-words" id="encapsulated-words"></div>
+    </div>
+    <div id="info-box-projects" class="hide">
+        <p>No projects found</p>
     </div>
     <div id="projects">
         <div id="add-project" class="show-if-logged">

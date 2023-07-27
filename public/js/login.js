@@ -7,19 +7,13 @@ loginForm.addEventListener("submit", (e) => {
     e.preventDefault()
 
 	if(loginForm.username.value){
-        localStorage.setItem('username', loginForm.username.value)
-		document.getElementById("login-id").textContent=loginForm.username.value.charAt(0).toUpperCase()
-        window.location.href = "./projects.html"
-        console.log('test')
+		let username = loginForm.username.value
         const loginId = document.getElementById('login-id')
 
-            const username = localStorage.getItem('username')
+        sessionStorage.setItem('username', username)
+        loginId.textContent = "logout"
 
-            if (username) {
-                loginId.textContent = username.charAt(0).toUpperCase()
-            } else{
-                loginId.textContent = "login"
-            }
+        window.location.href = "./projects.html"
     }else{
         alert("Username must not be empty!")
     }

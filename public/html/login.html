@@ -23,9 +23,8 @@
     .then(text => {
       const placeholder = document.getElementById('header-placeholder')
       placeholder.innerHTML = text
-      if(localStorage.getItem('username')){
-        document.getElementById('login-id').textContent = localStorage.getItem('username').charAt(0).toUpperCase()
-      }
+      document.getElementById('login-id').textContent = "login"
+      sessionStorage.removeItem('username')
     });
 </script>
 

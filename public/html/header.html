@@ -1,4 +1,4 @@
-<header onload="onHeaderLoad()">
+<header>
     <h1>Hugo Le Port</h1>
     <nav>
         <ul>
@@ -15,14 +15,12 @@
                 <a href="/MyPortfolio/public/html/about.html" class="menulink">about me</a>
             </li>
             <li>
-                <a id="login-id" href="/MyPortfolio/public/html/login.html" class="menulink hide-if-logged">login</a>
-            </li>
-            <li>
-                <a id="logout-id" href="/MyPortfolio/public/html/login.html" class="menulink show-if-logged">logout</a>
+                <a id="login-id" href="/MyPortfolio/public/html/login.html" class="menulink">login</a>
             </li>
         </ul>
     </nav>
 </header>
+
 <script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
@@ -46,5 +44,3 @@
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
 </script>
-
-<script type="text/javascript" src="../js/header.js"></script>
