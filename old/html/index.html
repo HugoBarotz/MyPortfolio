@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hugo Le Port - Java Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" as="image" href="../../public/assets/images/me.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+          rel="stylesheet">
+    <meta name="description" content="">
+    <link rel="preload" href="../../public/assets/style.css" as="style"/>
+    <link rel="stylesheet" href="../../public/assets/style.css">
+    <script src="https://kit.fontawesome.com/78b4bd7f01.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+<header id="header-placeholder"></header>
+<script>
+  fetch('./html/header.html')
+    .then(response => response.text())
+    .then(text => {
+      const placeholder = document.getElementById('header-placeholder')
+      placeholder.innerHTML = text
+      if(sessionStorage.getItem('username')){
+        document.getElementById('login-id').textContent = "logout"
+      }
+    });
+</script>
+
+<main>
+    <section id="introduction">
+        <h2 id="jobText" class="fade-transition">QA Developer</h2>
+        <div class="presentation">
+            <figure>
+                <img id="my-image" src="../../public/assets/images/me.png" alt="">
+            </figure>
+
+            <p class="main-description">With a solid background of 4 years' experience as a QA Developer, I aim to leverage
+                this expertise to become a proficient Java Backend Developer.
+                The virtues instilled by the QA profession will make me an impactful asset, enabling me to contribute
+                significantly to the various projects I work on.
+                </br>
+                </br>
+                This website is designed primarily for training purposes,
+                and does not reflect the full extent of my skills.
+                Furthermore, I don't pretend to be a UX designer or a front-end developer.
+                Take a look at the projects page to interact with RESTFUL APIs!
+                </br>
+                </br>
+                Be careful, there might be some hidden interactions... but don't forget that this is still WIP
+            </p>
+        </div>
+    </section>
+    <section class="workExperiences">
+        <div class="all-jobs">
+            <div class="work-decoration">
+                <div class="workExp">Work experiences</div>
+                <div class="decoration"></div>
+            </div>
+
+            <div class="job energisme">
+                <div class="job-header">
+                    <div class="job-details">
+                        <div class="job-title-dates">
+                            <h3 class="job-title">QA Developer</h3>
+                            <p class="job-dates">Sep. 2018 - Oct. 2022</p>
+                        </div>
+                        <a class="job-company no-decoration" href="https://energisme.com/" target="_blank">Energisme -
+                            Full-remote</a>
+                    </div>
+                </div>
+                <p class="job-description">Energisme is a software publisher company specialized in energetic
+                    performance. <br>
+                    Having joined a nascent QA team in September 2018, I played a pivotal role in its shaping and
+                    development.<br><br>
+
+                    Within Energisme, I was responsible for:</p>
+                <ul class="tasks-list">
+                    <li>Defining the tests strategies & team priorities ;</li>
+                    <li>Participating in the Feature Team's Scrum meetings ;</li>
+                    <li>In-depth product analysis, supporting Product Owners with Jira ticket writing (in english) ;
+                    </li>
+                    <li>Writing of <a href="https://cucumber.io/docs/gherkin/" class="highlight-text" target="_blank">Gherkin</a>
+                        test scenarios before the development was done (BDD testing) ;
+                    </li>
+                    <li>Implementation of functional, non-regression, integration & load tests for REST/<a
+                            href="https://graphql.org/" class="highlight-text" target="_blank">GraphQL</a> APIs
+                        in Java (using <a class="highlight-text" href="https://cucumber.io/"
+                                          target="_blank">Cucumber</a> & <a class="highlight-text"
+                                                                            href="https://junit.org/junit5/"
+                                                                            target="_blank">JUnit</a> frameworks) over
+                        more than 23 business-services and about 85% of
+                        all APIs covered ;
+                    </li>
+                    <li>ElasticSearch data manipulations & Kafka messages automated testing ;</li>
+                    <li>Optimize test performance, such as parallel testing, minimizing waiting time ;</li>
+                    <li>Retro-testing & documentation updates over more than 10 business-services, aswell as bug
+                        identification, presentation and tracking ;
+                    </li>
+                    <li>CI/CD management with <a class="highlight-text" href="https://www.jenkins.io/" target="_blank">Jenkins</a>
+                        & <a class="highlight-text" href="https://about.gitlab.com/" target="_blank">Gitlab</a> with
+                        nightly non-regression testing builds ;
+                    </li>
+                    <li>Manual testing with <a class="highlight-text" href="https://www.postman.com/" target="_blank">Postman</a>
+                        (API Rest) & <a class="highlight-text" href="https://altairgraphql.dev/"
+                                        target="_blank">Altair</a> (GraphQL) ;
+                    </li>
+                    <li>Code reviews between QA members (<span class="highlight-text underline"
+                                                               onmouseover="displayImage(event)"
+                                                               onmouseout="hideImage()">Kanban</span> methodology),
+                        constant code enhancement and technological watch ;
+                    </li>
+                    <li>Documenting our work processes and methodologies for newcomers, aswell as training of a new
+                        trainee ;
+                    </li>
+                    <li>And much more!</li>
+                </ul>
+
+                <div id="image-container">
+                    <img src="../../public/assets/images/kanban.png" alt="kanban">
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- TODO
+    CV DOWNLOAD
+-->
+
+
+<script type="text/javascript" src="../js/home.js"></script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDYM2wZfvRqIF_QPSgYxjUzan_NDmzKKbk",
+    authDomain: "myportfolio-eb126.firebaseapp.com",
+    projectId: "myportfolio-eb126",
+    storageBucket: "myportfolio-eb126.appspot.com",
+    messagingSenderId: "113405816476",
+    appId: "1:113405816476:web:acad12c4103b0fc337c759",
+    measurementId: "G-P0HM6MVRZS"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+</body>
+</html>
