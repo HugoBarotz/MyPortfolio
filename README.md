@@ -2,22 +2,19 @@
 
 This website has been made to showcase my passion for all kinds of development, and to promote my willingness to turn from a QA Developer into a Back-end Developer.
 
-The website doesn't claim to be of any utility besides showing I'm able to do whatever I want to achieve, and for fun. :)
+Remember that I am not a Front-end developer or a UX Designer :)
 
-## Summary
-### Home - CV
+### Home
+Contains my photo and useful links (LinkedIn, Github)
+
+### About
+A quick resume about me and the skills I'm most familiar with.
+
+Contains a downloadable link to my CV.
 
 ### Projects
-Display the projects I'm willing to show, or at least a glimpse of it
+Discover some of the projects I am willing to share.
 
-### Useful links
-My contact, social media links, ex-colleagues references etc.
+### Contact
+A simple form to send me a message via email.
 
-
-
-# Run docker containers locally:
-``` 
-wsl -d docker-desktop
-sysctl -w vm.max_map_count=262144
-exit
-```
